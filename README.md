@@ -1,17 +1,17 @@
 # Can the Plane Fly? - README
 
 ## Overview
-This Shiny application predicts whether a plane can fly based on weather conditions. The prediction is made using a Random Forest model trained on a dataset of historical weather data and flight outcomes.
+This Shiny application predicts whether a plane can fly based on weather conditions. The prediction is made using the SVM model trained on a dataset of historical weather data and flight outcomes.
 
 ## Prerequisites
 Before running the application, ensure you have the following R packages installed:
 - `shiny`
-- `randomForest`
+- `e1071`
 - `shinythemes`
 
 To install these packages, run:
 ```R
-install.packages(c("shiny", "randomForest", "shinythemes"))
+install.packages(c("shiny", "e1071", "shinythemes"))
 ```
 
 ## Dataset
@@ -43,7 +43,7 @@ The dataset is hardcoded within the app and consists of 14 samples.
 - **Prediction Results Table**: Displays the prediction result (yes or no) indicating whether the plane can fly under the given conditions.
 
 ## Model
-The application builds a Random Forest model using the `randomForest` package to predict the flight status. The model is trained on the provided dataset and used to make predictions based on user input.
+The application builds the SVM model using the `e1071` package to predict the flight status. The model is trained on the provided dataset and used to make predictions based on user input.
 
 ## Code Structure
 - **UI**: Defined in the `ui` variable using `fluidPage`. It includes input fields, a submit button, and output areas.
@@ -62,7 +62,7 @@ For debugging purposes, the input data is printed to the console before making p
 6. The prediction result will be displayed in the "Prediction results table".
 
 ## Conclusion
-This Shiny application provides an interactive interface to predict whether a plane can fly based on weather conditions using a machine learning model. It demonstrates the use of Shiny for building web applications in R and the Random Forest application for classification tasks.
+This Shiny application provides an interactive interface to predict whether a plane can fly based on weather conditions using a machine learning model. It demonstrates the use of Shiny for building web applications in R and the SVM application for classification tasks.
 
 ## CONTACTS
 You may reach me through:
