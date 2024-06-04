@@ -8,7 +8,7 @@ rm(list = ls())
 # Import libraries  
 library(shiny)
 library(e1071)
-library(randomForest)
+#library(randomForest)
 library(shinythemes)
 
 # Read data
@@ -21,12 +21,12 @@ weather <- data.frame(
 )
 
 
-# Convert 'play' to a factor
+# Convert 'fly' to a factor
 weather$fly <- factor(weather$fly, levels = c("no", "yes"))
 
 # Build logistic regression model
 #model <- glm(play ~ ., data = weather, family = binomial)
-model <- randomForest(fly ~ ., data = weather, ntree = 1000, mtry = 3, importance = FALSE)
+#model <- randomForest(fly ~ ., data = weather, ntree = 1000, mtry = 3, importance = FALSE)
 
 ####################################
 # User interface                   #
